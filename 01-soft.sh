@@ -9,7 +9,6 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 sudo apt-get update
 $APT_GET google-chrome-stable
-
 $APT_GET firefox
 $APT_GET flashplugin-installer # adobe flash playerのため
 
@@ -26,9 +25,6 @@ $APT_GET latexmk
 $APT_GET chktex
 $APT_GET a2ps # psset(両面印刷), psnup(複数ページを1枚に縮小) のため
 
-# mozc
-# $APT_GET ibus-mozc mozc-server mozc-utils-gui
-
 $APT_GET w3m
 
 # useful command
@@ -43,15 +39,16 @@ $APT_GET trash-cli
 # gtags
 $APT_GET global
 
+# グラフ言語
 $APT_GET graphviz
 
-# curl
-$APT_GET curl # emacs hatena-daiary-mode で使用
+# curl emacs hatena-daiary-mode で使用
+$APT_GET curl
 
-# 暗号化関連
+# 暗号化
 $APT_GET openssl
 
-# NASへの接続
+# NAS接続
 $APT_GET cifs-utils
 
 $APT_GET tmux
@@ -64,11 +61,9 @@ sudo git clone git://github.com/kmuto/review.git /opt/review
 
 # デフォルトでは vim-tiny しかインストールされていないため
 $APT_GET vim
-$APT_GET vim-gnome
 
 $APT_GET scala
 $APT_GET ruby
-$APT_GET php5 php-pear php5-dev php5-mysql
 
 # rpmを扱うための道具
 $APT_GET alien dpkg-dev debhelper build-essential

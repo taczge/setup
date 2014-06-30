@@ -13,10 +13,7 @@ $APT_GET firefox
 $APT_GET flashplugin-installer # adobe flash playerのため
 
 # version control system
-$APT_GET cvs
-$APT_GET subversion
 $APT_GET git-core
-$APT_GET gitk
 $APT_GET tig
 
 # tex

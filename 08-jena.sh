@@ -1,16 +1,22 @@
 #!/bin/sh
 
-readonly JENA_DIR="/opt/jena"
 readonly JENA_SRC="http://ftp.jaist.ac.jp/pub/apache//jena/binaries/apache-jena-2.11.2.tar.gz"
-readonly JENA_LIB="`echo $JENA_SRC | sed -e 's/.*\///g'`"
-readonly JENA_PATH="$JENA_DIR/`echo $JENA_LIB | sed -e 's/\.tar\.gz//g'`"
+readonly JENA_DIR="/opt/jena"
 
-if [ ! -e $JENA_DIR ]; then
-    sudo wget $JENA_SRC -P $JENA_DIR
-    sudo tar zxvf $JENA_DIR/$JENA_LIB -C $JENA_DIR
-    sudo ln -s $JENA_PATH "$JENA_DIR/latest"
-else
-    echo "Apache Jena is already installed."
+readonly JENA_PATH="$JENA_DIR/`basename $JENA_SRC .tar.gz`"
+if [ -e $JENA_PATH ]; then
+    echo "$JENA_PATH already exists."
+    exit 0
 fi
+
+readonly TAR_PATH="/tmp/`basename $JENA_SRC`"
+if [ ! -e $TAR_PATH ]; then
+    wget $JENA_SRC -P /tmp
+else
+    echo "[skip] $TAR_PATH already exists."
+fi
+
+sudo mkdir -p $JENA_DIR
+sudo tar zxvf $TAR_PATH -C $JENA_DIR
 
 # end of file

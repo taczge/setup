@@ -65,9 +65,6 @@ sudo git clone git://github.com/kmuto/review.git /opt/review
 # デフォルトでは vim-tiny しかインストールされていないため
 $APT_GET vim
 $APT_GET vim-gnome
-$APT_GET exuberant-ctags
-# ctags を ctags-exuberant に差し替える(vimのctagsのため)
-sudo ln -sf `which ctags-exuberant` /usr/local/bin/ctags
 
 $APT_GET scala
 $APT_GET ruby

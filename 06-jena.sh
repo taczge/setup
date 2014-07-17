@@ -18,5 +18,7 @@ fi
 
 sudo mkdir -p $JENA_DIR
 sudo tar zxvf $TAR_PATH -C $JENA_DIR
+sudo ln -s $JENA_PATH $JENA_DIR/latest
+sudo chmod -R 755 $JENA_DIR   # for loading $JENA_DIR/latest/jena-log4j.properties
 
 # end of file

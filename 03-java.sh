@@ -1,9 +1,8 @@
 #!/bin/sh -ex
 
-readonly APT_GET="sudo apt-get install -y"
+readonly INSTALL_CMD="sudo apt-get install -y"
 
-#$APT_GET maven
-#$APT_GET openjdk-7-jdk   # Eclipse Luna requirement
+$INSTALL_CMD maven
 
 #
 # eclipse

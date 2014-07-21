@@ -1,7 +1,5 @@
 #!/bin/sh
 
-sudo apt-get update
-
 readonly APT_GET="sudo apt-get install -y"
 
 # internet browser

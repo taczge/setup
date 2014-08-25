@@ -11,7 +11,7 @@ wget -nc $TAR_URL -P /tmp
 sudo tar xzvf /tmp/`basename $TAR_URL` -C /opt
 
 #
-# .profil
+# .profile
 #    export GOROOT="/opt/go"
 #    export PATH="$PATH:$GOROOT/bin"
 #

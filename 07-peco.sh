@@ -1,6 +1,7 @@
 #!/bin/sh
 
-readonly TAR_URL="https://github.com/peco/peco/releases/download/v0.2.5/peco_linux_amd64.tar.gz"
+readonly TAR_URL="https://github.com/peco/peco/releases/download/v0.2.8/peco_linux_amd64.tar.gz"
+
 if [ -x "`which peco`" ]; then
     echo "[exit] peco is already exists."
     exit 0;

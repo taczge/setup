@@ -9,6 +9,11 @@ readonly BIN_DEST="/usr/local/bin"
 #-------------------------------------------------------------------------------
 #
 
+if [ -x "`which peco`" ]; then
+    echo "[exit] peco is already exists."
+    exit 0;
+fi
+
 readonly TAR_FILE="`basename $BIN_URL`"
 
 cd /tmp

@@ -68,5 +68,6 @@ $APT_GET paco
 
 $APT_GET emacs24
 $APT_GET yatex
+$APT_GET silversearcher-ag # grep より早い再帰検索
 
 # end of file

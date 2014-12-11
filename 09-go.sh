@@ -15,3 +15,4 @@ sudo apt-get install mercurial
 # GOPATH/PATH が設定されていること
 go get -u github.com/nsf/gocode
 go get -u code.google.com/p/rog-go/exp/cmd/godef
+go get -u code.google.com/p/go.tools/cmd/goimports

@@ -29,6 +29,8 @@ install_lib() {
     download_lib "github.com/nsf/gocode"
     download_lib "code.google.com/p/rog-go/exp/cmd/godef"
     download_lib "code.google.com/p/go.tools/cmd/goimports"
+
+    download_lib "github.com/go-sql-driver/mysql"
 }
 
 install_go

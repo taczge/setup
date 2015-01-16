@@ -8,4 +8,5 @@ cd geeknote
 sudo python setup.py install
 geeknote settings --editor emacs
 
-# end of file
+# python の warning 対策
+[ -d $HOME/.python-eggs ] && chmod 755 $HOME/.python-eggs/

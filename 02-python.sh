@@ -21,6 +21,7 @@ $APTGET python-pydot
 $APTGET python-SPARQLWrapper
 $APTGET python-networkx
 $APTGET python-markdown
-$APTGET python-setuptools
+$APTGET python-setuptools # for easy_install
+$APTGET python-pip
 
 # end of file

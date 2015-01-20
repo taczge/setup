@@ -24,4 +24,5 @@ $APTGET python-markdown
 $APTGET python-setuptools # for easy_install
 $APTGET python-pip
 
-# end of file
+sudo pip install fabric
+sudo pip install cuisine

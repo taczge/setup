@@ -58,7 +58,6 @@ sudo git clone git://github.com/kmuto/review.git /opt/review
 $APT_GET vim
 
 $APT_GET scala
-$APT_GET ruby
 
 # rpmを扱うための道具
 $APT_GET alien dpkg-dev debhelper build-essential

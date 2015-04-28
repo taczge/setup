@@ -26,3 +26,4 @@ $APTGET python-pip
 
 sudo pip install fabric
 sudo pip install cuisine
+sudo pip install ansible

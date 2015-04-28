@@ -51,9 +51,6 @@ $APT_GET tmux
 # pdfの切り出し
 $APT_GET pdftk
 
-# ReVIEW
-sudo git clone git://github.com/kmuto/review.git /opt/review
-
 # デフォルトでは vim-tiny しかインストールされていないため
 $APT_GET vim
 

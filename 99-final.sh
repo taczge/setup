@@ -9,3 +9,6 @@ done
 ln -sfvT "$HOME/ダウンロード" "$HOME/in"
 ln -sfvT "$HOME/Dropbox"      "$HOME/box"
 ln -sfvT "$HOME/Dropbox/bin"  "$HOME/bin"
+
+mkdir $HOME/git
+mkdir $HOME/work

@@ -68,4 +68,15 @@ $APT_GET yatex
 # grep より早い再帰検索
 $APT_GET silversearcher-ag
 $APT_GET silversearcher-ag-el
-# end of file
+
+$APT_GET maven
+
+
+
+
+
+
+
+
+
+

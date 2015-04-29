@@ -17,5 +17,3 @@ else
     cd $ZSH_PLUGIN_DIR
     curl -L -O http://mimosa-pudica.net/src/incr-0.2.zsh
 fi
-
-# end of file

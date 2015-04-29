@@ -70,13 +70,3 @@ $APT_GET silversearcher-ag
 $APT_GET silversearcher-ag-el
 
 $APT_GET maven
-
-
-
-
-
-
-
-
-
-

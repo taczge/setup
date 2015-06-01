@@ -62,7 +62,6 @@ $APT_GET alien dpkg-dev debhelper build-essential
 # make install したパッケージの管理
 $APT_GET paco
 
-$APT_GET emacs24
 $APT_GET yatex
 
 # grep より早い再帰検索

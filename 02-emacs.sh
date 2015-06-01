@@ -4,7 +4,7 @@ readonly SRC_URL="http://ftp.jaist.ac.jp/pub/GNU/emacs/emacs-24.5.tar.xz"
 
 readonly WORK_DIR="/tmp"
 readonly SRC_DIR="$HOME/usr/src"
-readonly INSTALL_DIR="$HOME/usr/share"
+readonly INSTALL_DIR="$HOME/usr/"
 
 sudo apt-get install -y \
      libgtk-3-dev \

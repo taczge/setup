@@ -1,6 +1,12 @@
 #!/bin/sh
 
-readonly TAR_URL="https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz"
+readonly TAR_URL="https://storage.googleapis.com/golang/go1.4.2.linux-amd64.tar.gz"
+readonly INSTALL_DIR="$HOME/opt"
+readonly WORKING_DIR="/tmp"
+
+prepare() {
+    mkdir -p $INSTALL_DIR
+}
 
 install_go() {
     if [ -x "`which go`" ]; then
@@ -8,8 +14,8 @@ install_go() {
         return
     fi
 
-    wget -nc $TAR_URL -P /tmp
-    sudo tar xzvf /tmp/`basename $TAR_URL` -C /opt
+    wget -nc $TAR_URL -P $WORKING_DIR
+    tar xzvf $WORKING_DIR`basename $TAR_URL` -C $INSTALL_DIR
 }
 
 download_lib() {
@@ -34,5 +40,6 @@ install_lib() {
     download_lib "github.com/taczge/go"
 }
 
+prepare
 install_go
 install_lib

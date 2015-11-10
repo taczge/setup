@@ -22,3 +22,6 @@ cd $SRC_DIR/$(basename $SRC_URL .tar.xz)
 ./configure --prefix=$INSTALL_DIR
 make
 make install
+
+# for maigt
+sudo apt install -y texinfo

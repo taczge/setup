@@ -10,9 +10,13 @@ $APT_GET google-chrome-stable
 $APT_GET firefox
 $APT_GET flashplugin-installer # adobe flash playerのため
 
-# version control system
-$APT_GET git-core
+# 最新版gitをインストールするため
+sudo add-apt-repository -y ppa:git-core/ppa
+sudo apt-get update
+$APT_GET git
 $APT_GET tig
+
+$APT_GET subversion
 
 # tex
 $APT_GET texlive texlive-lang-cjk

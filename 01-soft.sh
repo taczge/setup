@@ -14,6 +14,7 @@ $APT_GET flashplugin-installer # adobe flash playerのため
 sudo add-apt-repository -y ppa:git-core/ppa
 sudo apt-get update
 $APT_GET git
+git config --global user.useConfigOnly true
 $APT_GET tig
 
 $APT_GET subversion

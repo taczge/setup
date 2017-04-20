@@ -15,7 +15,7 @@ install_go() {
     fi
 
     wget -nc $TAR_URL -P $WORKING_DIR
-    tar xzvf $WORKING_DIR`basename $TAR_URL` -C $INSTALL_DIR
+    tar xzvf $WORKING_DIR/`basename $TAR_URL` -C $INSTALL_DIR
 }
 
 download_lib() {

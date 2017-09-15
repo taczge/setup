@@ -26,4 +26,4 @@ cd "$HOME/etc"
 mkdir -p exports
 
 # other
-mkdir -p "$HOME/{opt,tmp,work}"
+mkdir -p "$HOME"/{opt,tmp,work}

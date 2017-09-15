@@ -23,7 +23,7 @@ mkdir -p "$HOME/etc"
 cd "$HOME/etc"
 [ ! -d dotfiles ] && git clone https://github.com/taczge/dotfiles.git
 [ ! -d setup ] && git clone https://github.com/taczge/setup.git
-mkdir exports
+mkdir -p exports
 
 # other
 mkdir -p "$HOME/{opt,tmp,work}"

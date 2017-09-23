@@ -1,17 +1,21 @@
-#!/bin/sh
+#!/bin/bash
 
-readonly TAR_URL="https://github.com/peco/peco/releases/download/v0.2.8/peco_linux_amd64.tar.gz"
+set -eux
 
-if [ -x "`which peco`" ]; then
-    echo "[exit] peco is already exists."
-    exit 0;
-fi
+readonly TAR_URL="https://github.com/peco/peco/releases/download/v0.5.1/peco_linux_amd64.tar.gz"
 
-wget -nc $TAR_URL -P /tmp
+readonly TAR_FILE="$(basename $TAR_URL)"
 
-readonly TAR_FILE="`basename $TAR_URL`"
-tar xzvf /tmp/$TAR_FILE -C /tmp
+readonly OPT_DIR="$HOME/opt"
+readonly PECO_DIR="$OPT_DIR/peco"
+readonly PECO_VER_DIR="$OPT_DIR/$(basename $TAR_URL .tar.gz)"
 
-readonly BIN="`basename $TAR_FILE .tar.gz`/peco"
-sudo mv /tmp/$BIN /usr/local/bin
-sudo chown root:root /usr/local/bin/peco
+
+cd "$OPT_DIR"
+wget -nc "$TAR_URL"
+tar --keep-newer-files -xzvf "$TAR_FILE"
+ln -sfv "$PECO_VER_DIR" "$PECO_DIR"
+
+cat << EOF > $HOME/etc/exports/peco
+export PATH=$PECO_DIR:\$PATH
+EOF
